@@ -8,6 +8,10 @@ Um parágrafo aprofundando mais sobre o seu projeto e uma explicação geral do 
 
 ## Utilização
 
+### Link para a aplicação do app (LIVE)
+
+https://telemarketing-viux.onrender.com
+
 ### Dependencias
 
 * Descreve quaisquer prerequisitos, bibliotecas, versão do SO, etc., que é necessário para rodar o projeto.

@@ -150,48 +150,48 @@ def main():
 
             submit_button = st.form_submit_button(label='Aplicar')
         
-        # Botões de download dos dados filtrados
-        st.write('## Após os filtros')
-        st.write(bank.head())
-        
-        df_xlsx = to_excel(bank)
-        st.download_button(label='📥 Download tabela filtrada em EXCEL',
-                            data=df_xlsx ,
-                            file_name= 'bank_filtered.xlsx')
-        st.markdown("---")
-
-    
-
-    	bank_raw_target_perc = bank_raw['y'].value_counts(normalize=True).to_frame() * 100
-    	bank_raw_target_perc = bank_raw_target_perc.sort_index().reset_index()
-    	bank_raw_target_perc.columns = ['y', 'percentage']
-
-    	bank_target_perc = bank['y'].value_counts(normalize=True).to_frame() * 100
-    	bank_target_perc = bank_target_perc.sort_index().reset_index()
-    	bank_target_perc.columns = ['y', 'percentage']
-
-    	# PLOTS   
-    	fig, ax = plt.subplots(1, 2, figsize=(10, 5))
-
-    	# Gráfico para dados brutos
-    	sns.barplot(x='y', y='percentage', data=bank_raw_target_perc, ax=ax[0])
-    	ax[0].bar_label(ax[0].containers[0])
-    	ax[0].set_title('Dados brutos', fontweight="bold")
-    	ax[0].set_xlabel('y')
-    	ax[0].set_ylabel('Proporção')
-
-    	# Gráfico para dados filtrados
-    	sns.barplot(x='y', y='percentage', data=bank_target_perc, ax=ax[1])
-    	ax[1].bar_label(ax[1].containers[0])
-    	ax[1].set_title('Dados filtrados', fontweight="bold")
-    	ax[1].set_xlabel('y')
-    	ax[1].set_ylabel('Proporção')
-
-    	# Exibir título geral
-    	st.write('## Proporção de aceite')
-
-    	# Exibir gráficos no Streamlit
-    	st.pyplot(fig)
+	# Botões de download dos dados filtrados
+	st.write('## Após os filtros')
+	st.write(bank.head())
+	      
+	df_xlsx = to_excel(bank)
+	st.download_button(label='📥 Download tabela filtrada em EXCEL',
+	                        data=df_xlsx ,
+	                        file_name= 'bank_filtered.xlsx')
+	st.markdown("---")
+	
+	    
+	
+	bank_raw_target_perc = bank_raw['y'].value_counts(normalize=True).to_frame() * 100
+	bank_raw_target_perc = bank_raw_target_perc.sort_index().reset_index()
+	bank_raw_target_perc.columns = ['y', 'percentage']
+	
+	bank_target_perc = bank['y'].value_counts(normalize=True).to_frame() * 100
+	bank_target_perc = bank_target_perc.sort_index().reset_index()
+	bank_target_perc.columns = ['y', 'percentage']
+	
+	# PLOTS   
+	fig, ax = plt.subplots(1, 2, figsize=(10, 5))
+	
+	# Gráfico para dados brutos
+	sns.barplot(x='y', y='percentage', data=bank_raw_target_perc, ax=ax[0])
+	ax[0].bar_label(ax[0].containers[0])
+	ax[0].set_title('Dados brutos', fontweight="bold")
+	ax[0].set_xlabel('y')
+	ax[0].set_ylabel('Proporção')
+	
+	# Gráfico para dados filtrados
+	sns.barplot(x='y', y='percentage', data=bank_target_perc, ax=ax[1])
+	ax[1].bar_label(ax[1].containers[0])
+	ax[1].set_title('Dados filtrados', fontweight="bold")
+	ax[1].set_xlabel('y')
+	ax[1].set_ylabel('Proporção')
+	
+	# Exibir título geral
+	st.write('## Proporção de aceite')
+	
+	# Exibir gráficos no Streamlit
+	st.pyplot(fig)
 
 
 if __name__ == '__main__':

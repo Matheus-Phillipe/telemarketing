@@ -1,6 +1,6 @@
 # Aplicação de análise de dados de telemarketing
 
-Esse projeto consiste em uma simples aplicação das tecnicas e habilidades envolvendo o Streamlit juntamente com github e o render para manter o app em LIVE.
+Esse projeto consiste em combinar tecnicas e habilidades envolvendo o Streamlit juntamente com github e um site de hospedagem para manter o app em LIVE. O host utilizado foi o Render.
 
 ## Descrição do projeto
 

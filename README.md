@@ -1,4 +1,4 @@
-# Título do projeto
+# Aplicação de análise de dados de telemarketing
 
 Um simples resumo do uso/propósito do projeto.
 

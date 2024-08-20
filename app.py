@@ -188,7 +188,7 @@ def main():
         ax[1].set_ylabel('Proporção')
 	
 	# Exibir título geral
-       st.write('## Proporção de aceite')
+        st.write('## Proporção de aceite')
 	
 	# Exibir gráficos no Streamlit
         st.pyplot(fig)
